@@ -7,11 +7,6 @@ from curl import *
 from data import Credentials
 
 
-
-
-
-
-
 @pytest.fixture
 def driver():
 
@@ -24,8 +19,8 @@ def driver():
 @pytest.fixture
 def login(driver):
     driver.get(login_url)
-    driver.find_element(*Locators.EMAIL_INPUT).send_keys(Credentials.email)
-    driver.find_element(*Locators.PASSWORD_INPUT).send_keys(Credentials.password)
+    driver.find_element(*Locators.EMAIL_FIELD).send_keys(Credentials.email)
+    driver.find_element(*Locators.PASSWORD_FIELD).send_keys(Credentials.password)
     driver.find_element(*Locators.LOGIN).click()
     WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located(Locators.PERSONAL_ACCOUNT_BUTTON)
