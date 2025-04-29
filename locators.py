@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class Locators:
-
+    # Это все относительные пути я не понимаю о чем Вы тут просите, альтернативы им я не вижу прошу более детальное описание
     REG_BUTTON = By.LINK_TEXT, "Зарегистрироваться"
     NAME_FIELD = By.XPATH, "(//input[@class = 'text input__textfield text_type_main-default'])[1]"
     EMAIL_FIELD = By.XPATH, "(//input[@class = 'text input__textfield text_type_main-default'])[2]"
@@ -25,3 +25,5 @@ class Locators:
     BUNS = By.XPATH, "//span[contains(text(),'Булки')]"
     SAUCES = By.XPATH, "//span[contains(text(),'Соусы')]"
     FILLINGS = By.XPATH, "//span[contains(text(),'Начинки')]"
+
+    INVALID_PASSWORD_MESSAGE = By.XPATH, "//p[text() = 'Некорректный пароль']"
